@@ -1,4 +1,3 @@
-Shamar Irelnad
 =======
 Contributor:
 Uwem Ekong
