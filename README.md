@@ -1,16 +1,17 @@
+## How to run the app
 
+1. Download Node [**here*](https://nodejs.dev/)
 
-Readme for sf hacks project
+2. cd into the "sfhacks" folder
+  ```
+  cd .../.../SF-Hacks-team/sf_hacks_repo/sfhacks
+  ```
+3. open your terminal and run "npm install"
+  ```
+  npm install
+  ```
 
-Change made by Alex
-hi im Uwem
-
-stuff added by Jeff Cheng
-stuff added by Jeff Cheng
-stuff added by Jeff Cheng
-stuff added by Jeff Cheng
-stuff added by Jeff Cheng
-stuff added by Jeff Cheng
-
-hi im Arthur
-
+4. Run "npm start"
+  ```
+  npm start
+  ```
