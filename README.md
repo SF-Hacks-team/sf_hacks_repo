@@ -16,8 +16,8 @@
   npm start
   ```
 
-Contributors:
+#### Contributors:
 Uwem Ekong\
 Shamar Ireland\
 Cheng, Jeff apisorder@gmail.com jcheng13@mail.sfsu.edu\
-Arthur Vannakittikun\
+Arthur Vannakittikun
