@@ -4,8 +4,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose')
-var User = require('./models/user');
+//var mongoose = require('mongoose')
+//var User = require('./models/user');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,10 +14,10 @@ require('dotenv').config();
 var app = express();
 
 // Connect to MongoDB
-var dbURI = process.env.DB_CREDS;
-console.log(dbURI);
-mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true});
-
+//var dbURI = process.env.DB_CREDS;
+//console.log(dbURI);
+//mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true});
+//
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

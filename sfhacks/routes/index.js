@@ -3,6 +3,8 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 let encodedParser = bodyParser.urlencoded({ extended: false })
 let User = require('../models/user')
+let request2 = require('request');
+
 //let request = require("request")
 //let lineReader = require('line-reader');
 //const Fs = require('fs');
@@ -17,9 +19,9 @@ const { route } = require('./users');
 //const csvtojsonV2=require("csvtojson/v2");
 
 router.post('/form', encodedParser ,async (req, res, next) => {
-  User.create(req.body).then(function(user){
+  //User.create(req.body).then(function(user){
     res.status(200).send("Succesfully submitted form data")
-  });
+  //});
   let county = req.body.county
   let state = req.body.state
   let fips = await getFips(county, state);
@@ -33,11 +35,12 @@ router.post('/form', encodedParser ,async (req, res, next) => {
   let apiKey = 'b52fc9bbd9664d32b8959729945ca6a7'
   let apiURL = `https://api.covidactnow.org/v2/county/${fips}.timeseries.json?apiKey=${apiKey}`
 
-  fetch(apiURL)
-    .then(res => res.json())
-    .then(json => console.log(json.data.fips));
-
-
+request2(apiURL, function(error, response, body) {
+    if (!error && response.statusCode == 200) {
+        let jsonStuff = JSON.parse(body);
+        getStats(jsonStuff);
+    }
+});
 
   // fetch(apiURL)
   //   .then(res => res.json())
@@ -96,10 +99,11 @@ async function  getFips(county, state) {
 
 function getStats(statsObj) {
   //res.render('statistics', {risklvl:risklvl, numCases: numCases, newCases:newCases, hospitalCap:hospitalCap})
-  riskLevel = statsObj.riskLevels
-  numCases = statsObj.actuals
-  hospitalCap = statsObj.actuals
-  newCases = statsObj.actuals
+    console.log(statsObj)
+  riskLevel = statsObj.riskLevels.overall
+  numCases = statsObj.actuals.cases
+  hospitalCap = statsObj.actuals.hospitalBeds.capacity
+  newCases = statsObj.actuals.newCases
 
   var queryStats = {
     risklvl:riskLevel,
@@ -107,6 +111,7 @@ function getStats(statsObj) {
     hospitalCap:hospitalCap,
     newCases:newCases,
   }
+    console.log(queryStats);
   return queryStats;
 }
 
