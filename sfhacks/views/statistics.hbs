@@ -6,11 +6,23 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" href="../public/stylesheets/statisticsstyles.css">
+        <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/statisticsstyles.css">
     </head>
     <body>
-        <p>Statistics Page</p>
+        <div class="container" id="logo-container">
+            <h1 class="logo-section"><img src="images/logo.png">RapidHealth</h1>
+        </div>
+        <div class="container" id ="stats-container">
+            <h1>Covid-19 Data For: <u>{{countyname}}</u></h1>
+            <h3>Number of confirmed cases in your county: <u>{{numcases}}</u></h3>
+            <h3>Number of new cases in your county: <u>{{newcases}}</u></h3>
+            <h3>Number of available hospital beds in your county: <u>{{hospitalcap}}</u></h3>
+            <h3>Risk Level in your county: <u>{{risklevel}}</u></h3>
+            <p style="text-align:left">Source: <a href="https://apidocs.covidactnow.org/">https://apidocs.covidactnow.org/</a></p>
+        </div>
         
-        <script src="../public/javascripts/statistics.js" async defer></script>
+        <script src="javascripts/statistics.js" async defer></script>
     </body>
 </html>
