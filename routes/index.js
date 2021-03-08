@@ -108,6 +108,7 @@ function getStats(statsObj) {
     hospitalCap:hospitalCap,
     newCases:newCases,
   }
+    console.log(queryStats);
   return queryStats;
 }
 
