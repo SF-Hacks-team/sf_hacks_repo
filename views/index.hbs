@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/indexstyles.css">
+    </head>
+    <body>
+
+        <div class="container" id="logo-container">
+            <h1 class="logo-section"><img src="images/logo.png">RapidHealth</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-4" id="content-col">
+                  <p><img src="images/phone-icon.png">Get The Latest Covid-19 Updates In Your Area!</p>
+                <p>RapidHealth sends you SMS and email notifications using Notivize, a notification API, and alerts you whenever the number of COVID-19 cases increases or decreases in your area! 
+                All you have to do is enter your contact information.</p>
+              </div>
+              <div class="col-sm-8" id="form-col">
+        <form id="user-info-form" method="POST" action="/form">
+            <label for="firstName">
+            </label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" onfocus="if (this.value=='First Name') this.value='';">
+
+            <label for="lastName"></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" onfocus="if (this.value=='Last Name') this.value='';">
+
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Email Address" onfocus="if (this.value=='Email Address') this.value='';">
+
+            <label for="phoneNumber"></label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" onfocus="if (this.value=='Phone Number') this.value='';">
+
+            <label for="state"></label>
+            <input type="text" id="state" name="state" placeholder="State" onfocus="if (this.value=='State') this.value='';">
+
+            <label for="lname"></label>
+            <input type="text" id="county" name="county"  placeholder="County" onfocus="if (this.value=='County') this.value='';">
+
+            <!--
+            <input type="checkbox" id="wantsPhoneNotif" name="wantsPhoneNotif" value="wantsPhoneNotif"><br><br>
+            <label for="wantsPhoneNotif">Opt In For Phone Notifications:</label><br>
+
+            <input type="checkbox" id="wantsEmailNotif" name="wantsEmailNotif" value="wantsEmailNotif"><br><br>
+            <label for="wantsEmailNotif">Opt In For Email Notifications:</label><br>
+            -->
+            
+            <input type="submit" class="button" value="Submit">
+            
+        </form> 
+              </div>
+            </div>
+          </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="javascripts/indexscript.js" async defer></script>
+    </body>
+</html>

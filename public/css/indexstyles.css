@@ -1,0 +1,145 @@
+.logo-section {
+    font-family: Margarine;
+    font-size: 70px;
+    text-align: center;
+}
+
+#logo-container {
+    box-shadow: 0px 1px 0px 1px rgb(229 233 242);
+    background: white
+}
+
+body {
+    background-image: url(../images/city2.jpg);
+    background-size: cover;
+}
+
+#content-col {
+background-color:white;margin-top:40px;
+height: 50%;
+text-align:center;
+border-radius: 10px;
+box-shadow: 0px 1px 0px 1px rgb(229 233 242);
+margin-top: 200px;
+}
+
+#user-info-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+input {
+    margin: 10px;
+  }
+
+  input[type=text] {
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 50px;
+    width: 300px;
+
+  }
+
+  input[type=email] {
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 50px;
+    width: 300px;
+  }
+.button {
+    border: none;
+    flex-basis: 40%;
+    margin-left:20%;
+    background: rgba(51,51,51,1);
+    color: white;
+    height: 70px;
+    width: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #form-col {
+    margin-top:200px;
+  }
+
+ 
+  
+
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .logo-section {
+        font-family: Margarine;
+        font-size: 70px;
+        text-align: center;
+    }
+    
+    #logo-container {
+        box-shadow: 0px 1px 0px 1px rgb(229 233 242);
+        background: white
+    }
+    
+    body {
+        background-image: url(../images/city2.jpg);
+        background-size: cover;
+    }
+    
+    #content-col {
+    background-color:white;margin-top:40px;
+    height: 50%;
+    text-align:center;
+    border-radius: 10px;
+    box-shadow: 0px 1px 0px 1px rgb(229 233 242);
+    }
+    
+    #user-info-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 50px;
+    }
+    
+    input {
+        margin: 10px;
+      }
+    
+      input[type=text] {
+        border: 2px solid black;
+        border-radius: 4px;
+        height: 50px;
+        width: 300px;
+    
+      }
+    
+      input[type=email] {
+        border: 2px solid black;
+        border-radius: 4px;
+        height: 50px;
+        width: 300px;
+      }
+    .button {
+        border: none;
+        flex-basis: 40%;
+        margin-left:20%;
+        background: rgba(51,51,51,1);
+        color: white;
+        height: 70px;
+        width: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      #form-col {
+        margin-top:100px;
+      }
+
+     
+    }
+
+
+
+  
